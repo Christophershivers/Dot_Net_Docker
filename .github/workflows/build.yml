@@ -15,11 +15,12 @@ jobs:
       - name: Publish Docker Image
         uses: matootie/github-docker@v3.1.0
         with:
-          accessToken: ${{ github.token }}
-          containerRegistry: true
-          file: ./Docker_Project/Dockerfile
-          buildArgs: |
-            PUBLIC_HELLO=world
+            context:
+              accessToken: ${{ github.token }}
+              containerRegistry: true
+              file: ./Docker_Project/Dockerfile
+              buildArgs: |
+                PUBLIC_HELLO=world
       - name: Deploy on CapRover
         uses: caprover/deploy-from-github@v1.1.2
         with:
