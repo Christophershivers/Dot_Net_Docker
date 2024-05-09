@@ -25,4 +25,4 @@ jobs:
           server: https://rov.base-compl.com
           app: 'dotnet'
           token: '${{ secrets.APP_TOKEN }}'
-          image: 'ghcr.io/christophershivers/Dot_Net_Docker:latest'
+          image: 'ghcr.io/christophershivers/dot_net_docker:latest'
