@@ -17,7 +17,7 @@ jobs:
         with:
           accessToken: ${{ github.token }}
           containerRegistry: true
-          dockerfilePath: 'Docker_Project/Dockerfile'
+          file: ./Docker_Project/Dockerfile
           buildArgs: |
             PUBLIC_HELLO=world
       - name: Deploy on CapRover
